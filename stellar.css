@@ -1,0 +1,144 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(184, 191, 187);
+}
+.travel{
+    height: 45px;
+    width: 45px;
+}
+.stellar{
+    display: inline;
+    font-size: 250%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: silver;
+    margin-right: auto;
+}
+.stellar:hover{
+    color:#008080;
+    
+}
+.top{
+    background-image: url(image1.jpg);
+    padding: 20px;
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 10;
+}
+.search-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  
+}
+.nav a{
+    margin-left: 40px;
+    color: #dfcee4;
+    text-decoration: none;
+}
+.nav a:hover {
+    color: #4e5e7b;
+}
+.mountainimg{
+    padding: 4%;
+    background-size: 0%;
+    background-color: darkseagreen;
+    height: 200px;
+    margin-left: 6%;
+    margin-top: 9%;
+}
+.menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+}
+.menu-open {
+    display: none;
+}
+
+.menu-open-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: #588080;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+
+.menu-open-button:hover {
+    background: #90c0b1;
+}
+
+.menu-open-button span {
+    display: block;
+    background: white;
+    height: 3px;
+    width: 30px;
+    margin-bottom: 6px;
+    transition: transform 0.3s ease;
+}
+
+.menu-items {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: right ;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.menu-item a{
+    color: aliceblue;
+}
+
+.menu-item {
+    background: #617567;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.menu-open:checked ~ .menu-items {
+    opacity: 1;
+    transform: scaleY(1);
+    transition-delay: 0.1s;
+}
+
+.menu-open:checked ~ .menu-items .menu-item {
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 0.1s;
+}
+.menu-open-button:hover ~ .menu-items,.menu-items:hover {
+            opacity: 1;
+            transform: scaleY(1);
+            transition-delay: 0.1s;
+        }
+
+.menu-open-button:hover ~ .menu-items .menu-item,.menu-items:hover .menu-item {
+            opacity: 1;
+            transform: scale(1);
+            transition-delay: 0.1s;
+        }
+    
